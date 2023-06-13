@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { Poppins } from 'next/font/google'
 import { ReactNode } from 'react'
 
@@ -17,7 +18,14 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
    return (
       <html lang="pt-BR">
-         <body className={font.className}>{children}</body>
+         <body
+            className={clsx(
+               'flex min-h-screen flex-col items-center bg-background',
+               font.className
+            )}
+         >
+            {children}
+         </body>
       </html>
    )
 }
