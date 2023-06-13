@@ -10,6 +10,10 @@ module.exports = {
          colors: {
             background: '#131212',
             purpleprimary: '#8c12f0',
+            bluereact: '#149ECA',
+            orangehtml: '#E54C21',
+            bluecss: '#0173BA',
+            bluetypescript: '#0079CA',
          },
       },
    },

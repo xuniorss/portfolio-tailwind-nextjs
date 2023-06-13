@@ -1,20 +1,15 @@
 'use client'
 
-import { differenceInCalendarYears } from 'date-fns'
-import { ReactNode } from 'react'
+import { ExperienceProps } from '@/types/experience'
 import clsx from 'clsx'
+import { differenceInCalendarYears } from 'date-fns'
 import { motion } from 'framer-motion'
-
-interface ExperienceProps {
-   iconTech: ReactNode
-   experience: number
-   techStarted: number
-}
 
 export const Experience = ({
    iconTech,
    experience,
    techStarted,
+   techName,
 }: ExperienceProps) => {
    const currentDate = new Date()
    const started = new Date(techStarted, 0, 1)
@@ -53,6 +48,9 @@ export const Experience = ({
                   </p>
                )}
             </motion.div>
+         </div>
+         <div className="hidden text-white opacity-0 transition group-hover:opacity-100 md:block">
+            <small>{techName}</small>
          </div>
       </div>
    )
