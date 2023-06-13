@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 import { getDownloadURL, getMetadata, ref } from 'firebase/storage'
 import storage from '@/services/firebase'
 import Link from 'next/link'
+import { Header } from '@/components/Header'
 
 export default function AboutView() {
    const [download, setDownload] = useState('')
@@ -31,15 +32,7 @@ export default function AboutView() {
          whileInView={{ y: [-50, 0], opacity: 1 }}
          className="flex min-h-screen w-full max-w-screen-xl flex-col px-8"
       >
-         <main className="flex flex-col items-center py-6">
-            <div className="flex flex-col gap-y-4">
-               <span className="text-center text-sm font-extrabold uppercase tracking-[0.313em] text-purpleprimary">
-                  Quem sou eu ?
-               </span>
-               <h1 className="mb-12 text-5xl font-bold text-white">
-                  Sobre mim
-               </h1>
-            </div>
+         <Header title="Sobre mim" subtitle="QUEM SOU EU ?">
             <div className="grid w-full grid-cols-1 place-items-center space-y-6 md:grid-cols-2 md:space-y-0">
                <motion.div
                   initial={{ x: 0, opacity: 0 }}
@@ -80,7 +73,7 @@ export default function AboutView() {
                   </Link>
                </motion.div>
             </div>
-         </main>
+         </Header>
       </motion.section>
    )
 }
