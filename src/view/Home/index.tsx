@@ -11,9 +11,10 @@ import { ExperienceProps } from '@/types/experience'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Experience } from './components/Experience'
+
 import { BsInstagram, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { IconType } from 'react-icons'
+import { Experience } from './components/Experience'
 
 type SocialProps = {
    icon: IconType
@@ -21,7 +22,7 @@ type SocialProps = {
    href: string
 }
 
-export default function Home() {
+export default function HomeView() {
    const exp: Array<ExperienceProps> = [
       {
          iconTech: (
@@ -93,7 +94,7 @@ export default function Home() {
          animate={{ y: 0, opacity: 1 }}
          transition={{ duration: 2, delay: 0.5 }}
          id="home"
-         className="flex h-full w-full max-w-screen-xl flex-col px-8"
+         className="flex h-screen w-full max-w-screen-xl flex-col px-8"
       >
          <main className="mt-0 grid grid-cols-1 gap-y-5 py-10 md:mt-5 md:grid-cols-2 md:gap-y-0">
             <div className="flex w-full flex-col space-y-9">
