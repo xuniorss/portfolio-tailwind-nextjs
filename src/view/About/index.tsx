@@ -28,8 +28,8 @@ export default function AboutView() {
       <motion.section
          id="about"
          initial={{ opacity: 0 }}
-         whileInView={{ y: [50, 0], opacity: 1 }}
-         className="flex h-screen w-full max-w-screen-xl flex-col px-8"
+         whileInView={{ y: [-50, 0], opacity: 1 }}
+         className="flex min-h-screen w-full max-w-screen-xl flex-col px-8"
       >
          <main className="flex flex-col items-center py-6">
             <div className="flex flex-col gap-y-4">
@@ -40,7 +40,7 @@ export default function AboutView() {
                   Sobre mim
                </h1>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid w-full grid-cols-1 place-items-center space-y-6 md:grid-cols-2 md:space-y-0">
                <motion.div
                   initial={{ x: 0, opacity: 0 }}
                   whileInView={{ x: [-250, 0], opacity: 1 }}
@@ -60,7 +60,7 @@ export default function AboutView() {
                   transition={{ duration: 1 }}
                   className="flex flex-col space-y-5"
                >
-                  <p className="text-lg text-white">
+                  <p className="text-[1rem] leading-6 text-white md:text-lg">
                      Sou um desenvolvedor fullstack com {age} anos de idade,
                      especializado nas linguagens de programação ReactJs,
                      NextJs, React-Native, NodeJs, AdonisJs e TypeScript. Sempre
@@ -74,7 +74,7 @@ export default function AboutView() {
                   <Link
                      href={download}
                      target="_blank"
-                     className="w-1/2 rounded-xl bg-white px-3 py-4 text-center text-sm font-semibold capitalize hover:bg-white/90"
+                     className="w-full rounded-xl bg-white px-3 py-4 text-center text-sm font-semibold capitalize hover:bg-white/90 md:w-1/2"
                   >
                      {`Ver Currículo (${kb} kb)`}
                   </Link>

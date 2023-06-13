@@ -94,7 +94,7 @@ export default function HomeView() {
          animate={{ y: 0, opacity: 1 }}
          transition={{ duration: 2, delay: 0.5 }}
          id="home"
-         className="flex h-screen w-full max-w-screen-xl flex-col px-8"
+         className="flex min-h-screen w-full max-w-screen-xl flex-col px-8"
       >
          <main className="mt-0 grid grid-cols-1 gap-y-5 py-10 md:mt-5 md:grid-cols-2 md:gap-y-0">
             <div className="flex w-full flex-col space-y-9">
@@ -111,7 +111,7 @@ export default function HomeView() {
                         Olá, Eu sou o{' '}
                         <span className="text-purpleprimary">Gilberto! 👋</span>
                      </h1>
-                     <p className="text-lg italic text-gray-400/70 md:text-xl">
+                     <p className="text-center text-lg italic text-gray-400/70 md:text-xl">
                         Engenheiro de Software
                      </p>
                   </div>
@@ -135,7 +135,7 @@ export default function HomeView() {
                   </div>
                </div>
             </div>
-            <div className="flex flex-col items-end justify-center gap-y-10">
+            <div className="flex flex-col items-start justify-center gap-y-10 md:items-end">
                <div className="flex w-full max-w-xs flex-col items-start gap-y-2">
                   <h2 className="text-center text-xl text-white">Educação</h2>
                   <p className="text-white/50">
