@@ -10,7 +10,16 @@ import { experience } from '@/constants'
 import { ExperienceProps } from '@/types/experience'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Experience } from './components/Experience'
+import { BsInstagram, BsGithub, BsLinkedin } from 'react-icons/bs'
+import { IconType } from 'react-icons'
+
+type SocialProps = {
+   icon: IconType
+   name: string
+   href: string
+}
 
 export default function Home() {
    const exp: Array<ExperienceProps> = [
@@ -64,6 +73,20 @@ export default function Home() {
       },
    ]
 
+   const social: Array<SocialProps> = [
+      { icon: BsGithub, name: 'GitHub', href: 'https://github.com/xuniorss' },
+      {
+         icon: BsLinkedin,
+         name: 'Linkedin',
+         href: 'https://www.linkedin.com/in/gilberto-fortunato-111899201/',
+      },
+      {
+         icon: BsInstagram,
+         name: 'Instagram',
+         href: 'https://www.instagram.com/xuniorss/',
+      },
+   ]
+
    return (
       <motion.section
          initial={{ y: -15, opacity: 0 }}
@@ -72,15 +95,15 @@ export default function Home() {
          id="home"
          className="flex h-full w-full max-w-screen-xl flex-col px-8"
       >
-         <main className="mt-0 grid grid-cols-1 py-10 md:mt-5 md:grid-cols-2">
+         <main className="mt-0 grid grid-cols-1 gap-y-5 py-10 md:mt-5 md:grid-cols-2 md:gap-y-0">
             <div className="flex w-full flex-col space-y-9">
-               <div className="flex flex-col items-center gap-x-0 space-y-4 md:flex-row md:gap-x-4 md:space-y-0">
+               <div className="flex flex-col-reverse items-center gap-x-0 space-y-4 md:flex-row md:gap-x-4 md:space-y-0">
                   <Image
                      src="/images/portfolio.jpg"
                      alt="Image"
                      width={230}
                      height={230}
-                     className="aspect-auto rounded-full border border-purpleprimary object-cover"
+                     className="mt-4 aspect-auto rounded-full border border-purpleprimary object-cover md:mt-0"
                   />
                   <div className="flex flex-col items-center md:items-start">
                      <h1 className="text-center text-[1.75rem] font-bold leading-[2.625rem] text-white">
@@ -109,6 +132,37 @@ export default function Home() {
                         />
                      ))}
                   </div>
+               </div>
+            </div>
+            <div className="flex flex-col items-end justify-center gap-y-10">
+               <div className="flex w-full max-w-xs flex-col items-start gap-y-2">
+                  <h2 className="text-center text-xl text-white">Educação</h2>
+                  <p className="text-white/50">
+                     Cursando Pós-Graduação em Engenharia de Software na
+                     PUC-Minas
+                  </p>
+               </div>
+               <div className="flex w-full max-w-xs flex-col items-start gap-y-4">
+                  <h3 className="text-lg text-white">Contato</h3>
+                  <div className="flex gap-x-4">
+                     {social.map((value) => {
+                        const Icon = value.icon
+
+                        return (
+                           <Link
+                              key={value.name}
+                              href={value.href}
+                              target="_blank"
+                              className="text-white/50 transition hover:text-white/70"
+                           >
+                              <Icon size={25} />
+                           </Link>
+                        )
+                     })}
+                  </div>
+                  <button className="rounded bg-purpleprimary p-4 text-white transition hover:bg-purple-700">
+                     Entre em contato
+                  </button>
                </div>
             </div>
          </main>
