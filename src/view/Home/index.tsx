@@ -11,6 +11,7 @@ import { ExperienceProps } from '@/types/experience'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import Typed from 'react-typed'
 
 import { BsInstagram, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { IconType } from 'react-icons'
@@ -107,13 +108,24 @@ export default function HomeView() {
                      className="mt-4 aspect-auto rounded-full border border-purpleprimary object-cover md:mt-0"
                   />
                   <div className="flex flex-col items-center md:items-start">
-                     <h1 className="text-center text-[1.75rem] font-bold leading-[2.625rem] text-white">
+                     <h1 className="text-center text-[1.563rem] font-bold leading-[2.345rem] text-white">
                         Olá, Eu sou o{' '}
                         <span className="text-purpleprimary">Gilberto! 👋</span>
                      </h1>
-                     <p className="text-center text-lg italic text-gray-400/70 md:text-xl">
+                     <Typed
+                        className="text-center text-lg italic text-gray-400/70 md:text-xl"
+                        strings={[
+                           'Engenheiro de Software.',
+                           'FullStack Developer.',
+                           'Front-End Developer.',
+                        ]}
+                        typeSpeed={40}
+                        backSpeed={50}
+                        loop
+                     />
+                     {/* <p className="">
                         Engenheiro de Software
-                     </p>
+                     </p> */}
                   </div>
                </div>
                <div className="flex flex-col space-y-5">
