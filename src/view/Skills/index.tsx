@@ -6,16 +6,17 @@ import { useState } from 'react'
 import { ButtonSkill } from './components/ButtonSkill'
 import { Courses } from './components/Courses'
 import { Exp } from './components/Exp'
+import { FinishesComponent } from './components/FinishesComponent'
 import { Skill } from './components/Skill'
 
-export default function SkillsView() {
+export default function SkillsView({ commitsQtd }: { commitsQtd: number }) {
    const [active, setActive] = useState(0)
 
    return (
       <motion.section
          id="about"
          initial={{ opacity: 0 }}
-         whileInView={{ y: [-50, 0], opacity: 1 }}
+         whileInView={{ opacity: 1 }}
          className="flex min-h-screen w-full max-w-screen-xl flex-col px-8"
       >
          <Header
@@ -51,6 +52,14 @@ export default function SkillsView() {
             {active === 1 && <Exp />}
 
             {active === 2 && <Courses />}
+
+            <motion.div
+               initial={{ opacity: 0 }}
+               whileInView={{ y: [-50, 0], opacity: 1 }}
+               className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-5 text-center text-white md:mt-20 md:gap-y-0"
+            >
+               <FinishesComponent commitQtd={commitsQtd} />
+            </motion.div>
          </Header>
       </motion.section>
    )

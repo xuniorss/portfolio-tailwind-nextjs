@@ -29,7 +29,7 @@ export default function AboutView() {
       <motion.section
          id="about"
          initial={{ opacity: 0 }}
-         whileInView={{ y: [-50, 0], opacity: 1 }}
+         whileInView={{ opacity: 1 }}
          className="flex min-h-screen w-full max-w-screen-xl flex-col px-8"
       >
          <Header title="Sobre mim" subtitle="QUEM SOU EU ?">
