@@ -45,7 +45,7 @@ export default function AboutView() {
                      width={300}
                      alt="Image2"
                      priority
-                     className="rounded-md border border-purpleprimary object-cover transition hover:scale-105"
+                     className="rounded-md border border-purpleprimary object-cover transition duration-300 hover:scale-105"
                   />
                </motion.div>
                <motion.div
