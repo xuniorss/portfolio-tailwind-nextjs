@@ -1,13 +1,13 @@
 'use client'
 
+import { Header } from '@/components/Header'
 import { useAge } from '@/hooks/useAge'
+import storage from '@/services/firebase'
+import { getDownloadURL, getMetadata, ref } from 'firebase/storage'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
-import { getDownloadURL, getMetadata, ref } from 'firebase/storage'
-import storage from '@/services/firebase'
 import Link from 'next/link'
-import { Header } from '@/components/Header'
+import { useEffect, useState } from 'react'
 
 export default function AboutView() {
    const [download, setDownload] = useState('')
@@ -44,6 +44,7 @@ export default function AboutView() {
                      height={300}
                      width={300}
                      alt="Image2"
+                     priority
                      className="rounded-md border border-purpleprimary object-cover transition hover:scale-105"
                   />
                </motion.div>

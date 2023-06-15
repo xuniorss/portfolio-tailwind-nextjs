@@ -13,8 +13,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Typed from 'react-typed'
 
-import { BsInstagram, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { IconType } from 'react-icons'
+import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs'
 import { Experience } from './components/Experience'
 
 type SocialProps = {
@@ -105,6 +105,7 @@ export default function HomeView() {
                      alt="Image"
                      width={230}
                      height={230}
+                     priority
                      className="mt-4 aspect-auto rounded-full border border-purpleprimary object-cover md:mt-0"
                   />
                   <div className="flex flex-col items-center md:items-start">
@@ -119,13 +120,10 @@ export default function HomeView() {
                            'FullStack Developer.',
                            'Front-End Developer.',
                         ]}
-                        typeSpeed={40}
-                        backSpeed={50}
+                        typeSpeed={100}
+                        backSpeed={30}
                         loop
                      />
-                     {/* <p className="">
-                        Engenheiro de Software
-                     </p> */}
                   </div>
                </div>
                <div className="flex flex-col space-y-5">

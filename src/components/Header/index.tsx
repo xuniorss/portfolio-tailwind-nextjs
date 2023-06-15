@@ -13,7 +13,9 @@ export const Header = ({ title, subtitle, children }: HeaderProps) => {
             <span className="text-center text-sm font-extrabold uppercase tracking-[0.313em] text-purpleprimary">
                {subtitle}
             </span>
-            <h1 className="mb-12 text-5xl font-bold text-white">{title}</h1>
+            <h1 className="mb-12 text-center text-3xl font-bold leading-relaxed text-white md:text-5xl">
+               {title}
+            </h1>
          </div>
          {children}
       </main>
