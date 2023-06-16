@@ -62,4 +62,11 @@ export const workImages: Array<workImagesProps> = [
       repoLink: 'https://github.com/xuniorss/messenger-clone',
       deployUrl: 'https://messenger-clone-smoky-alpha.vercel.app/',
    },
+   {
+      id: 9,
+      img: '/images/spotify-clone.png',
+      name: 'Spotify Clone',
+      category: 'clones',
+      repoLink: 'https://github.com/xuniorss/spotify-clone',
+   },
 ]
