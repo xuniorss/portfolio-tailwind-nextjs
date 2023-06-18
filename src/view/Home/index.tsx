@@ -6,22 +6,14 @@ import IconJavascript from '@/components/Icons/IconJavascript'
 import IconNextjs from '@/components/Icons/IconNextjs'
 import IconReactjsFill from '@/components/Icons/IconReactjsFill'
 import IconTypescript from '@/components/Icons/IconTypescript'
-import { experience } from '@/constants'
+import { experience, social } from '@/constants'
 import { ExperienceProps } from '@/types/experience'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import Typed from 'react-typed'
 
-import { IconType } from 'react-icons'
-import { BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs'
 import { Experience } from './components/Experience'
-
-type SocialProps = {
-   icon: IconType
-   name: string
-   href: string
-}
 
 export default function HomeView() {
    const exp: Array<ExperienceProps> = [
@@ -72,20 +64,6 @@ export default function HomeView() {
          experience,
          techStarted: 2017,
          techName: 'JavaScript',
-      },
-   ]
-
-   const social: Array<SocialProps> = [
-      { icon: BsGithub, name: 'GitHub', href: 'https://github.com/xuniorss' },
-      {
-         icon: BsLinkedin,
-         name: 'Linkedin',
-         href: 'https://www.linkedin.com/in/gilberto-fortunato-111899201/',
-      },
-      {
-         icon: BsInstagram,
-         name: 'Instagram',
-         href: 'https://www.instagram.com/xuniorss/',
       },
    ]
 
@@ -171,9 +149,12 @@ export default function HomeView() {
                         )
                      })}
                   </div>
-                  <button className="rounded bg-purpleprimary p-4 text-white transition hover:bg-purple-700">
+                  <Link
+                     href="#contact"
+                     className="rounded bg-purpleprimary p-4 text-white transition hover:bg-purple-700"
+                  >
                      Entre em contato
-                  </button>
+                  </Link>
                </div>
             </div>
          </main>
