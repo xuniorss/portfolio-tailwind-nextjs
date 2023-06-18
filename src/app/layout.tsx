@@ -1,3 +1,4 @@
+import { Footer } from '@/components/Footer'
 import clsx from 'clsx'
 import { Poppins } from 'next/font/google'
 import { ReactNode } from 'react'
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             )}
          >
             {children}
+            <Footer />
          </body>
       </html>
    )
