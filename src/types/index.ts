@@ -5,3 +5,8 @@ export type SocialProps = {
    name: string
    href: string
 }
+
+export type LinksProps = {
+   href: string
+   name: string
+}

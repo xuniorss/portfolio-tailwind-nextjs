@@ -11,9 +11,11 @@ import { ExperienceProps } from '@/types/experience'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { BiLinkAlt } from 'react-icons/bi'
 import Typed from 'react-typed'
 
 import { Experience } from './components/Experience'
+import { ReposLink } from './constants'
 
 export default function HomeView() {
    const exp: Array<ExperienceProps> = [
@@ -125,14 +127,33 @@ export default function HomeView() {
             </div>
             <div className="flex flex-col items-start justify-center gap-y-10 md:items-end">
                <div className="flex w-full max-w-xs flex-col items-start gap-y-2">
-                  <h2 className="text-center text-xl text-white">Educação</h2>
+                  <h2 className="text-center text-xl text-white">
+                     Educação 📚
+                  </h2>
                   <p className="text-white/50">
                      Cursando Pós-Graduação em Engenharia de Software na
                      PUC-Minas
                   </p>
                </div>
+               <div className="flex w-full max-w-xs flex-col items-start space-y-3">
+                  <h3 className="text-lg text-white">
+                     Alguns outros repositórios ✨
+                  </h3>
+
+                  {ReposLink.map((value) => (
+                     <Link
+                        key={value.href}
+                        href={value.href}
+                        target="_blank"
+                        className="flex gap-x-2 truncate rounded-xl bg-gray-500 bg-opacity-20 px-2 py-1 text-white/50 transition hover:text-white/70"
+                     >
+                        <BiLinkAlt size={20} />
+                        <p className="text-sm capitalize">{value.name}</p>
+                     </Link>
+                  ))}
+               </div>
                <div className="flex w-full max-w-xs flex-col items-start gap-y-4">
-                  <h3 className="text-lg text-white">Contato</h3>
+                  <h3 className="text-lg text-white">Contato 🤳</h3>
                   <div className="flex gap-x-4">
                      {social.map((value) => {
                         const Icon = value.icon
