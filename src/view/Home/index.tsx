@@ -145,10 +145,12 @@ export default function HomeView() {
                         key={value.href}
                         href={value.href}
                         target="_blank"
-                        className="flex gap-x-2 truncate rounded-xl bg-gray-500 bg-opacity-20 px-2 py-1 text-white/50 transition hover:text-white/70"
+                        className="flex gap-x-2 rounded-lg bg-gray-500 bg-opacity-20 px-2 py-1 text-white/50 transition hover:text-white/70"
                      >
                         <BiLinkAlt size={20} />
-                        <p className="text-sm capitalize">{value.name}</p>
+                        <p className="truncate text-sm capitalize">
+                           {value.name}
+                        </p>
                      </Link>
                   ))}
                </div>
