@@ -69,4 +69,12 @@ export const workImages: Array<workImagesProps> = [
       category: 'clones',
       repoLink: 'https://github.com/xuniorss/spotify-clone',
    },
+   {
+      id: 10,
+      img: '/images/reddit-clone.png',
+      name: 'Reddit Clone',
+      category: 'clones',
+      repoLink: 'https://github.com/xuniorss/reddit-clone',
+      deployUrl: 'https://reddit-clone-xuniorss.vercel.app/',
+   },
 ]
