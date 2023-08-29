@@ -1,4 +1,5 @@
 import { Footer } from '@/components/Footer'
+import { Analytics } from '@vercel/analytics/react'
 import clsx from 'clsx'
 import { Poppins } from 'next/font/google'
 import { ReactNode } from 'react'
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             )}
          >
             {children}
+            <Analytics />
             <Footer />
          </body>
       </html>
