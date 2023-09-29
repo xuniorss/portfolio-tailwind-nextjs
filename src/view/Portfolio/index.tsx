@@ -59,6 +59,16 @@ export default function Portfolio() {
          className="flex min-h-screen w-full max-w-screen-xl flex-col px-8"
       >
          <Header title="Projetos Incríveis" subtitle="MEU TRABALHO">
+            <span className="text-white">
+               Veja mais projetos no{' '}
+               <Link
+                  href="https://github.com/xuniorss?tab=repositories"
+                  target="_blank"
+                  className="text-purpleprimary hover:underline hover:underline-offset-1"
+               >
+                  github
+               </Link>
+            </span>
             <div className="flex flex-col items-center justify-center">
                <motion.div
                   initial={{ opacity: 0 }}
