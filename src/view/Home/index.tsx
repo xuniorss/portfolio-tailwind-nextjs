@@ -24,7 +24,7 @@ export default function HomeView() {
             <IconReactjsFill className="h-10 w-10 transition group-hover:text-bluereact" />
          ),
          experience,
-         techStarted: 2018,
+         techStarted: 2019,
          techName: 'React.js',
       },
       {
@@ -40,7 +40,7 @@ export default function HomeView() {
             <IconNextjs className="h-10 w-10 transition group-hover:text-white" />
          ),
          experience,
-         techStarted: 2018,
+         techStarted: 2019,
          techName: 'Next.js',
       },
       {
@@ -56,7 +56,7 @@ export default function HomeView() {
             <IconTypescript className="h-10 w-10 transition group-hover:text-bluetypescript" />
          ),
          experience,
-         techStarted: 2018,
+         techStarted: 2019,
          techName: 'TypeScript',
       },
       {
